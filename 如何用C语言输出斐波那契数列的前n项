@@ -1,0 +1,13 @@
+#include<stdio.h>
+void main(void)
+{
+	int a=1,b=1,c;
+	printf("斐波那契数列如下：\n");
+	for(c=0;c<=10;c++)
+	{
+		printf("%d,%d\n",a,b);
+		a=a+b;
+		b=a+b;
+	}
+}
+
