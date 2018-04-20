@@ -13,3 +13,28 @@ int main()
 	}
 	getch();
 }
+
+
+
+
+
+另一种形式：
+#include<stdio.h>
+void main()
+{
+	int i,j,k;
+	printf("\t");
+	for(i=1;i<10;i++)
+		printf("%d\t",i);
+	printf("\n-------------------------------------------------------------------------\n");
+	for(i=1;i<10;i++)
+	{
+		printf("%d\t",i);
+		for(j=1;j<10;j++)
+		{
+			k=i*j;
+			printf("%d\t",k);
+		}
+		printf("\n");
+	}
+}
