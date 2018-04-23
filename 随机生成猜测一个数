@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>       /*这行没用*/
+#include<stdlib.h>      /*使用随机数函数是，要写此行*/
+#include<time.h>        /*time.h是c/c++中的日期和时间的头文件，用这个产生随机数种子。*/
+void main()
+{
+	int n,a,i=0;
+	srand(time(NULL));      /*初始化随机数发生器*/
+	n=rand();       /*rand（）作用是产生一个0~32767之间的随机数*/
+	a=n-1;
+	while(n!=a)
+	{
+		printf("请输入猜测数：");
+		scanf("%d",&a);
+		i++;
+		if(a>n)
+			printf("猜测数过大\n");
+		else if(a<n)
+			printf("猜测数过小\n");
+	}
+	printf("ok\n");
+	printf("猜测数为：%d\n",i);
+}
